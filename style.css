@@ -1,0 +1,227 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #C1DDD8; 
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fredoka One', sans-serif;
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 10vh;
+    background-color: #F6EEDF;
+}
+.logo{
+    color:#fff;
+    text-transform: capitalize;
+    font-size: 24px;
+    cursor: pointer;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+.logo span {
+    color: #00d9d9;
+}
+.menu {
+    display: flex;
+    justify-content: space-around;
+    width: 30%
+}   
+.menu li {
+    list-style: none;
+}
+.menu li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 30px;
+    font-weight: 600;
+    transition: .9s;
+}
+.menu li a:hover {
+    color: #0c5050;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.gloria {
+    max-height: 30%;
+    max-width: 10%;
+    border-radius: 50%;
+}
+
+.bar {
+    display: none;
+    cursor: pointer;
+}
+.bar  div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+    transition: all 0.5s ease;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .menu {
+       width: 60%;
+    }
+}   
+@media screen and (max-width: 768px) { 
+    body{
+        overflow-x: hidden;
+    }
+    
+    .menu {
+        position: absolute;
+        right: -100%;
+        top: 10vh;
+        height: 40%;
+        background-color: #00d9d9;
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        width: 100%; 
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in-out;  
+       
+    }
+    .bar {
+        display: block;
+    }
+}
+
+.nav-active {
+        transform: translateX(-100%);
+    }
+.bar-active .bar-1{
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.bar-active .bar-2{
+    opacity: 0;
+}
+.bar-active .bar-3{
+    transform: rotate(45deg) translate(-5px, -6px);
+} 
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out;
+    width: 60%;
+    height: 80%;
+    max-width: 8000px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+    margin: 0 auto;
+    margin-top: 20px;
+
+}
+.banner {
+  text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #F6EEDF;
+    color: #333;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.one {
+    display: inline-block; 
+    padding: 15px 30px;
+    background-color: aqua;
+    border-radius: 10px;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none; 
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.fade-in-content {
+    opacity: 0;
+    animation: fadeIn 1.2s ease-in 0.5s forwards; 
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 40px auto;
+    gap: 30px;
+}
+
+.shadow-box {
+    flex: 1;
+    padding: 25px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .shadow-box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+    }
+
+    .shadow-box {
+        margin-bottom: 20px;
+    }
+}
+
