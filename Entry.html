@@ -15,22 +15,18 @@
 </div>
 
 <div class="form-container fade-in-content">
-        <form method="post">
-
-        <h2 class="form-title">Entry</h2>
-
-        <div class="form-group">
-            <label>Your Name</label>
-            <input id="name" class="form-input" required />
-        </div>
-
-        <div class="form-group">
-            <label>Entry Time</label>
-            <input type="time"  required class="form-input" />
-        </div>
-
-        <button type="submit" class="form-button one">Submit</button>
-    </form>
+         <form id="entryForm" action="https://formspree.io/f/xldldeeq" method="POST">
+    <h2 class="form-title">Entry</h2>
+    <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required class="form-input">
+    </div>
+    <div class="form-group">
+        <label for="time">Time</label>
+        <input type="time" id="time" name="time" required class="form-input">
+    </div>
+    <button type="submit" class="form-button one">Submit</button>
+</form>
 </div>
 
     <footer class="border-top footer text-muted">
